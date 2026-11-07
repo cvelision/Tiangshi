@@ -1,0 +1,6 @@
+{
+  "name": "5th Anniversary of Fire Empire",
+  "description": "An imperial 5th anniversary celebration and royal tribute gift from Sapphire Country to Tiangshi Empire, featuring Skill Faith ZGRP, official state epistle, and imperial regalia gallery.",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}

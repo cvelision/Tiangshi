@@ -1,0 +1,124 @@
+@import "tailwindcss";
+@custom-variant dark (&:where(.dark, .dark *));
+
+:root {
+  --beige: #f5ebe0;
+  --beige-light: #faf4ed;
+  --beige-warm: #e6d5c3;
+  --beige-antique: #d4be9c;
+  --beige-deep: #bca082;
+  --flame: #ff3b1e;
+  --crimson-wine: #54060b;
+  --crimson-dark: #200204;
+  --bg-deep: #080001;
+  --ink: #f5ebe0;
+}
+
+body {
+  margin: 0;
+  background: radial-gradient(ellipse at 50% 0, #2e0407 0%, #170203 50%, #080001 100%) fixed;
+  color: var(--ink);
+  font-family: 'Cinzel', 'Montserrat', Georgia, serif;
+  min-height: 100vh;
+}
+
+.font-cinzel {
+  font-family: 'Cinzel', Georgia, serif;
+}
+
+.font-script {
+  font-family: 'Great Vibes', 'Snell Roundhand', cursive;
+  font-weight: 400;
+}
+
+.font-calligraphy {
+  font-family: 'Ma Shan Zheng', 'Cinzel', cursive, serif;
+}
+
+.font-mn {
+  font-family: 'Montserrat', 'Plus Jakarta Sans', system-ui, sans-serif;
+  letter-spacing: 0.02em;
+}
+
+.font-sans-clean {
+  font-family: 'Montserrat', 'Plus Jakarta Sans', system-ui, sans-serif;
+  letter-spacing: 0.015em;
+}
+
+.font-mn-serif {
+  font-family: 'Cormorant Garamond', 'Cinzel', serif;
+}
+
+/* Custom Text Glow Effects in Beige and Crimson Flame */
+.glow-script {
+  color: #ffffff;
+  text-shadow: 0 0 18px #f5ebe0, 0 0 50px rgba(180, 20, 25, 0.75), 0 0 80px rgba(255, 59, 30, 0.45);
+}
+
+.glow-five {
+  color: #f5ebe0;
+  text-shadow: 0 0 24px #f5ebe0, 0 0 60px #ff3b1e, 0 0 100px rgba(90, 8, 12, 0.85);
+}
+
+.glow-beige {
+  text-shadow: 0 0 14px rgba(245, 235, 224, 0.75);
+}
+
+.glow-red {
+  text-shadow: 0 0 16px rgba(180, 20, 25, 0.8);
+}
+
+.royal-box-shadow {
+  box-shadow: 0 0 0 1px rgba(230, 213, 195, 0.35),
+              0 0 45px rgba(150, 15, 20, 0.35),
+              0 25px 60px rgba(0, 0, 0, 0.92);
+}
+
+.royal-box-shadow-hover {
+  box-shadow: 0 0 0 1.5px rgba(245, 235, 224, 0.7),
+              0 0 65px rgba(255, 59, 30, 0.45),
+              0 30px 70px rgba(0, 0, 0, 0.96);
+}
+
+@keyframes pulse-subtle {
+  0%, 100% { opacity: 1; transform: scale(1); }
+  50% { opacity: 0.55; transform: scale(0.98); }
+}
+
+.animate-pulse-subtle {
+  animation: pulse-subtle 1.8s ease-in-out infinite;
+}
+
+/* Ken Burns Subtle Motion for Intro Background without distortion */
+@keyframes ken-burns-intro {
+  0% {
+    transform: scale(1.02) translate(0%, 0%);
+  }
+  50% {
+    transform: scale(1.07) translate(-1%, -1.5%);
+  }
+  100% {
+    transform: scale(1.03) translate(1%, 0.8%);
+  }
+}
+
+.animate-ken-burns {
+  animation: ken-burns-intro 28s ease-in-out infinite alternate;
+  will-change: transform;
+}
+
+/* Custom Scrollbar */
+::-webkit-scrollbar {
+  width: 8px;
+}
+::-webkit-scrollbar-track {
+  background: #080001;
+}
+::-webkit-scrollbar-thumb {
+  background: #380508;
+  border-radius: 4px;
+  border: 1px solid rgba(230, 213, 195, 0.25);
+}
+::-webkit-scrollbar-thumb:hover {
+  background: #5c090e;
+}
